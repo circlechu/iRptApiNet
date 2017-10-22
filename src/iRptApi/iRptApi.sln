@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Web.Common", "iRpt.Web
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "iRpt.DataBase", "iRpt.DataBase\iRpt.DataBase.sqlproj", "{E95F967F-D38D-41F3-878F-EE1D4F596F29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Web.Api", "iRpt.Web.Api\iRpt.Web.Api.csproj", "{DFF16DF0-96BA-49B3-A2CF-1880A325C9BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{E95F967F-D38D-41F3-878F-EE1D4F596F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E95F967F-D38D-41F3-878F-EE1D4F596F29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E95F967F-D38D-41F3-878F-EE1D4F596F29}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DFF16DF0-96BA-49B3-A2CF-1880A325C9BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF16DF0-96BA-49B3-A2CF-1880A325C9BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF16DF0-96BA-49B3-A2CF-1880A325C9BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF16DF0-96BA-49B3-A2CF-1880A325C9BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
