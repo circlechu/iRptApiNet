@@ -15,7 +15,16 @@ namespace iRpt.Web.Api.Controllers
 //        [Route("{id:long}", Name = "GetClientRoute")]
         public Client GetClient(long id)
         {
-            return  new Client {Clientid= id,Clientcode = "MATA",Clientname = "Miracle Capital"};
+            var client= new Client { Clientid = id, Clientcode = "MATA", Clientname = "Miracle Capital" };
+            return client;
+        }
+
+        [AllowAnonymous]
+        public IEnumerable<Client> GetClients()
+        {
+            var client = new Client { Clientid = 1, Clientcode = "MATA", Clientname = "Miracle Capital" };
+            return new List<Client> {client};
+
         }
 
         [HttpPost]
