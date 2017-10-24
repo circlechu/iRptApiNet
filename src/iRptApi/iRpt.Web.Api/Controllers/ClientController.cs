@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Web.Http;
-using iRpt.Common.Extensions;
+using iRpt.Web.Api.Extensions.Result;
 using iRpt.Web.Api.Models;
-using Newtonsoft.Json;
 
 namespace iRpt.Web.Api.Controllers
 {
@@ -15,22 +11,20 @@ namespace iRpt.Web.Api.Controllers
 //        [Route("{id:long}", Name = "GetClientRoute")]
         public Client GetClient(long id)
         {
-            var client= new Client { Clientid = id, Clientcode = "MATA", Clientname = "Miracle Capital" };
+            var client = new Client {Clientid = id, Clientcode = "MATA", Clientname = "Miracle Capital"};
             return client;
         }
 
         [AllowAnonymous]
         public IEnumerable<Client> GetClients()
         {
-            var client = new Client { Clientid = 1, Clientcode = "MATA", Clientname = "Miracle Capital" };
+            var client = new Client {Clientid = 1, Clientcode = "MATA", Clientname = "Miracle Capital"};
             return new List<Client> {client};
-
         }
 
         [HttpPost]
         public IHttpActionResult AddClient(HttpRequestMessage requestMessage, Client newClient)
         {
-
             /*
             POST http://localhost:36553/api/client HTTP/1.1
             Content-Type: text/json
@@ -42,7 +36,6 @@ namespace iRpt.Web.Api.Controllers
             var result = new CreationActionResult<Client>(requestMessage, newClient);
             return result;
         }
-
 
 
         [HttpPut]
@@ -62,11 +55,7 @@ namespace iRpt.Web.Api.Controllers
         [HttpDelete]
         public IHttpActionResult DeleteClient(long id)
         {
-            
             return Ok();
         }
     }
-
-    
-
 }
