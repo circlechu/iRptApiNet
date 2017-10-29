@@ -33,6 +33,8 @@
     <Compile Include="Mapping\ClientMap.cs" />
     <Compile Include="Mapping\FundMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\ClientQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\FundQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -44,8 +46,16 @@
       <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iRpt.Common\iRpt.Common.csproj">
+      <Project>{011AFB60-D69B-48A8-9177-87221AA55410}</Project>
+      <Name>iRpt.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iRpt.Data\iRpt.Data.csproj">
       <Project>{7012ce5c-b386-4c15-a42a-e5ade5760a4a}</Project>
       <Name>iRpt.Data</Name>

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace iRpt.Web.Api.Models
 {
-    public class Client
+    public class ClientModel
     {
-        public Client() { }
         public long Clientid { get; set; }
         public string Clientcode { get; set; }
         public string Clientname { get; set; }

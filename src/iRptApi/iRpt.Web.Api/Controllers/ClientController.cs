@@ -2,28 +2,36 @@
 using System.Net.Http;
 using System.Web.Http;
 using iRpt.Web.Api.Extensions.Result;
+using iRpt.Web.Api.MaintenanceProcessing;
 using iRpt.Web.Api.Models;
 
 namespace iRpt.Web.Api.Controllers
 {
     public class ClientController : ApiController
     {
-//        [Route("{id:long}", Name = "GetClientRoute")]
-        public Client GetClient(long id)
+        private readonly IClientMaintenanceProcessor _clientMaintenanceProcessor;
+
+        public ClientController(IClientMaintenanceProcessor clientMaintenanceProcessor)
         {
-            var client = new Client {Clientid = id, Clientcode = "MATA", Clientname = "Miracle Capital"};
+            _clientMaintenanceProcessor = clientMaintenanceProcessor;
+        }
+
+//        [Route("{id:long}", Name = "GetClientRoute")]
+        public ClientModel GetClient(long id)
+        {
+            var client = new ClientModel {Clientid = id, Clientcode = "MATA", Clientname = "Miracle Capital"};
             return client;
         }
 
         [AllowAnonymous]
-        public IEnumerable<Client> GetClients()
+        public IEnumerable<ClientModel> GetClients()
         {
-            var client = new Client {Clientid = 1, Clientcode = "MATA", Clientname = "Miracle Capital"};
-            return new List<Client> {client};
+            var client = new ClientModel {Clientid = 1, Clientcode = "MATA", Clientname = "Miracle Capital"};
+            return new List<ClientModel> {client};
         }
 
         [HttpPost]
-        public IHttpActionResult AddClient(HttpRequestMessage requestMessage, Client newClient)
+        public IHttpActionResult AddClient(HttpRequestMessage requestMessage, ClientModel newClient)
         {
             /*
             POST http://localhost:36553/api/client HTTP/1.1
@@ -32,14 +40,14 @@ namespace iRpt.Web.Api.Controllers
             {"ClientCode":"MATA","ClientName":"Miracle Capital"}
 
              */
-            newClient.Clientid = 2;
-            var result = new CreationActionResult<Client>(requestMessage, newClient);
+            var client = _clientMaintenanceProcessor.AddClient(newClient);
+            var result = new CreationActionResult<ClientModel>(requestMessage, client);
             return result;
         }
 
 
         [HttpPut]
-        public Client UpdateClient(long id, [FromBody] object updatedClient)
+        public ClientModel UpdateClient(long id, [FromBody] object updatedClient)
         {
             /*
               PUT http://localhost:36553/api/client/1 HTTP/1.1
@@ -48,7 +56,7 @@ namespace iRpt.Web.Api.Controllers
               { "ClientCode":"MATA","ClientName":"Miracle Capital"}
             */
 
-            var client = new Client {Clientid = id, Clientname = "Client 1", Clientcode = "client1"};
+            var client = new ClientModel {Clientid = id, Clientname = "Client 1", Clientcode = "client1"};
             return client;
         }
 
