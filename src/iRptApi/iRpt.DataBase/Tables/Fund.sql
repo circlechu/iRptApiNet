@@ -1,9 +1,21 @@
-﻿CREATE TABLE [dbo].[Fund]
+﻿
+CREATE TABLE [dbo].[Fund](
+	[FundId] [bigint] IDENTITY(1,1) NOT NULL,
+	[FundCode] [nvarchar](50) NOT NULL,
+	[FundName] [nvarchar](200) NOT NULL,
+	[ClientId] [bigint] NOT NULL,
+ CONSTRAINT [PK_Fund] PRIMARY KEY CLUSTERED 
 (
-	[FundId] BIGINT NOT NULL , 
-    [FundCode] NVARCHAR(50) NOT NULL, 
-    [FundName] NVARCHAR(200) NOT NULL, 
-	[ClientId] BIGINT NOT NULL, 
-    CONSTRAINT [PK_Fund] PRIMARY KEY ([FundId]), 
-    CONSTRAINT [FK_Fund_Client] FOREIGN KEY (CLientId) REFERENCES Client(ClientId) 
-)
+	[FundId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Fund]  WITH CHECK ADD  CONSTRAINT [FK_Fund_Client] FOREIGN KEY([ClientId])
+REFERENCES [dbo].[Client] ([ClientId])
+GO
+
+ALTER TABLE [dbo].[Fund] CHECK CONSTRAINT [FK_Fund_Client]
+GO
+

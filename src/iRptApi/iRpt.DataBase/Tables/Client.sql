@@ -1,7 +1,9 @@
-﻿CREATE TABLE [dbo].[Client]
+﻿CREATE TABLE [dbo].[Client](
+	[ClientId] [bigint] IDENTITY(1,1) NOT NULL,
+	[ClientCode] [nvarchar](30) NOT NULL,
+	[ClientName] [nvarchar](200) NOT NULL,
+ CONSTRAINT [PK_Client] PRIMARY KEY CLUSTERED 
 (
-	[ClientId] BIGINT NOT NULL , 
-    [ClientCode] NVARCHAR(30) NOT NULL, 
-    [ClientName] NVARCHAR(200) NOT NULL, 
-    CONSTRAINT [PK_Client] PRIMARY KEY ([ClientId])
-)
+	[ClientId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]

@@ -63,4 +63,7 @@
     <Build Include="Tables\Client.sql" />
     <Build Include="Tables\Fund.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="iRpt.DataBase.publish.xml" />
+  </ItemGroup>
 </Project>
