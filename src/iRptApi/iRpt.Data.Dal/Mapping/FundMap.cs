@@ -8,7 +8,7 @@ namespace iRpt.Data.Dal.Mapping {
     public class FundMap : ClassMap<Fund> {
         
         public FundMap() {
-            Table("dbo.Fund");
+            Table("Fund");
             LazyLoad();
             Id(x => x.Fundid).GeneratedBy.Identity().Column("FundId");
             References(x => x.Client).Column("ClientId");

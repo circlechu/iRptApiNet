@@ -60,9 +60,8 @@ namespace iRpt.Web.Api
         private void ConfigureNHibernate(IKernel container)
         {
             var sessionFactory = Fluently.Configure()
-                .Database(
-                    MsSqlConfiguration.MsSql2008.ConnectionString(
-                        c => c.FromConnectionStringWithKey("iRptApi")))
+//                .Database(MySQLConfiguration.Standard.ConnectionString(c => c.FromConnectionStringWithKey("iRptApi")))
+              .Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c.FromConnectionStringWithKey("iRptApi")))
                 .CurrentSessionContext("web")
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<ClientMap>())
                 .BuildSessionFactory();
