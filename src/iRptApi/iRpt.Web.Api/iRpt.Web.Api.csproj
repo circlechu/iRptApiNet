@@ -146,9 +146,9 @@
       <Project>{011afb60-d69b-48a8-9177-87221aa55410}</Project>
       <Name>iRpt.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\iRpt.Data.Dal\iRpt.Data.Dal.csproj">
+    <ProjectReference Include="..\iRpt.Data.Dal\iRpt.Data.SqlServer.csproj">
       <Project>{5c1b9e37-ad08-403c-ad77-c7ebc8d5ef68}</Project>
-      <Name>iRpt.Data.Dal</Name>
+      <Name>iRpt.Data.SqlServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\iRpt.Data\iRpt.Data.csproj">
       <Project>{7012ce5c-b386-4c15-a42a-e5ade5760a4a}</Project>

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using iRpt.Data.Entities;
 using iRpt.Data.QueryProcessors;
 
-namespace iRpt.Data.Dal.QueryProcessors
+namespace iRpt.Data.SqlServer.QueryProcessors
 {
     public  class FundQueryProcessor: IFundQueryProcessor
     {

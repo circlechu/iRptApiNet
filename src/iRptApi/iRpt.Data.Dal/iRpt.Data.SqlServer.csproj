@@ -7,8 +7,8 @@
     <ProjectGuid>{5C1B9E37-AD08-403C-AD77-C7EBC8D5EF68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iRpt.Data.Dal</RootNamespace>
-    <AssemblyName>iRpt.Data.Dal</AssemblyName>
+    <RootNamespace>iRpt.Data.SqlServer</RootNamespace>
+    <AssemblyName>iRpt.Data.SqlServer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

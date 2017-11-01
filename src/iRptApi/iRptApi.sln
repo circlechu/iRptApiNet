@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Common", "iRpt.Common\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Data", "iRpt.Data\iRpt.Data.csproj", "{7012CE5C-B386-4C15-A42A-E5ADE5760A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Data.Dal", "iRpt.Data.Dal\iRpt.Data.Dal.csproj", "{5C1B9E37-AD08-403C-AD77-C7EBC8D5EF68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Data.SqlServer", "iRpt.Data.Dal\iRpt.Data.SqlServer.csproj", "{5C1B9E37-AD08-403C-AD77-C7EBC8D5EF68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRpt.Web.Api.Models", "iRpt.Web.Api.Models\iRpt.Web.Api.Models.csproj", "{A574E2B4-D93A-4A09-BFDF-E197F13B5461}"
 EndProject
